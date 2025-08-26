@@ -1,0 +1,119 @@
+ body {
+      font-family: 'Roboto Mono', monospace;
+      transition: background 0.6s, color 0.6s;
+    }
+    .cyberpunk {
+      background: linear-gradient(135deg, #221a36 0%, #0d1017 100%);
+      color: #c9fffb;
+    }
+    .cyberpunk .neon {
+      text-shadow: 0 0 10px #00ffe7, 0 0 20px #3d8aff;
+      font-family: 'Orbitron', sans-serif;
+      letter-spacing: 2px;
+    }
+    .cyberpunk .btn-neon {
+      border: none;
+      outline: none;
+      background: linear-gradient(90deg,#3d8aff 0,#00ffe7 100%);
+      color: #1a1f2b;
+      font-weight: 700;
+      padding: 0.6rem 1.2rem;
+      border-radius: 0.4rem;
+      box-shadow: 0 0 10px #00ffe7, 0 0 30px #3d8aff44;
+      transition: background 0.3s, box-shadow 0.3s, color 0.3s;
+      cursor: pointer;
+      text-transform: uppercase;
+    }
+    .cyberpunk .btn-neon:hover {
+      background: linear-gradient(90deg,#00ffe7 0,#3d8aff 100%);
+      color: #221a36;
+      box-shadow: 0 0 30px #00ffe7, 0 0 60px #3d8aff88;
+    }
+    .cyberpunk .link {
+      color: #3d8aff;
+      cursor: pointer;
+      text-decoration: underline;
+      transition: color 0.3s, text-shadow 0.3s;
+    }
+    .cyberpunk .link:hover {
+      color: #00ffe7;
+      text-shadow: 0 0 6px #00ffe7;
+    }
+    .cyberpunk .glass {
+      background: rgba(34,26,54,0.80);
+      backdrop-filter: blur(6px);
+      border: 1px solid #00ffe7;
+      border-radius: 1rem;
+      box-shadow: 0 0 30px #3d8aff33, 0 0 10px #00ffe722;
+      padding: 1.5rem;
+      margin: 1rem 0;
+    }
+    .cyberpunk .input {
+      background: rgba(34,26,54,0.95);
+      border: 1px solid #3d8aff;
+      color: #c9fffb;
+      padding: 0.5rem 1rem;
+      border-radius: 0.4rem;
+      outline: none;
+      font-size: 1rem;
+      transition: border 0.3s, box-shadow 0.3s;
+    }
+    .cyberpunk .input:focus {
+      border: 1px solid #00ffe7;
+      box-shadow: 0 0 10px #00ffe788;
+    }
+    /* Dark mode toggle */
+    .toggle-switch {
+      position: relative;
+      width: 70px;
+      display: inline-block;
+      user-select: none;
+    }
+    .toggle-switch input {
+      display: none;
+    }
+    .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: #3d8aff;
+      border-radius: 34px;
+      transition: background 0.4s;
+      box-shadow: 0 0 10px #00ffe777;
+    }
+    .slider:before {
+      position: absolute;
+      content: "";
+      height: 27px;
+      width: 27px;
+      left: 6px;
+      bottom: 6px;
+      background: #221a36;
+      border-radius: 50%;
+      transition: transform 0.4s, background 0.4s;
+      box-shadow: 0 0 10px #00ffe777;
+    }
+    input:checked + .slider {
+      background: #00ffe7;
+    }
+    input:checked + .slider:before {
+      transform: translateX(32px);
+      background: #3d8aff;
+    }
+    /* Animations */
+    .fade-in {
+      animation: fadeIn 0.7s cubic-bezier(.62,.06,.4,.97);
+    }
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: translateY(30px);}
+      100% { opacity: 1; transform: translateY(0);}
+    }
+    /* Responsive tweaks */
+    @media (max-width: 640px) {
+      .cyberpunk .glass {
+        padding: 1rem;
+      }
+      .cyberpunk h1 {
+        font-size: 2rem;
+      }
+    }
